@@ -1,0 +1,25 @@
+.cluck-img {
+    width: 500px;
+    height: 250px;
+}
+
+@media only screen and (max-width: 800px) {
+  .cluck-img{
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cluck-img{
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cluck-img{
+    width: 240px;
+    height: 150px;
+  }
+}

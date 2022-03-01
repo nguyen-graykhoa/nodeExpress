@@ -13,12 +13,12 @@ router.get("/login", (req, res) => {
 router.post("/sign_in", (req, res) => {
   const username = req.body.username;
   res.cookie("username", username, { maxAge: new Date(MAXAGE) });
-  res.redirect("/home");
+  res.redirect("/clucks");
 });
 
 router.post("/sign_out", (req, res) => {
   res.clearCookie("username");
-  res.redirect("/home");
+  res.redirect("/clucks");
 });
 
 module.exports = router;

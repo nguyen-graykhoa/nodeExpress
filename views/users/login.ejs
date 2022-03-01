@@ -1,11 +1,12 @@
 <%- include("../partials/header.ejs") %> 
-
+<div class="container-fluid d-flex flex-column justify-content-center " style="border: 1px solid grey; margin: 5px; padding: 10px; min-height: 120px; "> 
 <form action="/sign_in" method="post">
-    <div>
-        <label for="username">User Name</label>
-        <input type="text" name="username" id="">
+     <label for="username">User Name</label>
+    <div>        
+        <input class="form-control" type="text" name="username" id="">
     </div>
-    <button type="submit">Sign In</button>
+    <button class="float-right mt-3 btn btn-outline-dark btn-lg" type="submit">Sign In</button>
 </form>
+</div>
 
 <%- include("../partials/footer.ejs") %> 

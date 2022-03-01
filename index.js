@@ -1,6 +1,8 @@
 const express = require("express");
 const logger = require("morgan");
 const usersRouter = require("./routes/users");
+const clucksRouter = require("./routes/clucks.js");
+ 
  
 const cookieParser = require("cookie-parser");
 
@@ -32,9 +34,10 @@ app.use((req, res, next) => {
 
 app.get("/home", (req, res) => {
   res.render("home")
-})
-app.use(usersRouter);
+});
 
+app.use(usersRouter);
+app.use("/clucks", clucksRouter);
 
 const PORT = 3000;
 const DOMAIN = "localhost";

@@ -1,0 +1,21 @@
+
+<div class='form-group'>
+    <input 
+    type="url" 
+    class='form-control' 
+    name='image_url' 
+    placeholder='e.g. http://imgurl.com/myPic.jpg' 
+    value="<%= cluck ? cluck.image_url : '' %>"
+    />
+</div>
+<div class='form-group'>
+    <textarea
+    class='form-control' 
+    name='content' 
+    placeholder='What are your thoughts?' 
+    cols='60'
+    rows='5'
+    >
+    <%- cluck ? cluck.content : '' %>
+    </textarea> 
+</div>

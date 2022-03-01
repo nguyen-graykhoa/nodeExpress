@@ -1,0 +1,9 @@
+<%- include("../partials/header.ejs") %>
+<div style="border: solid 1px grey; padding: 15px"> 
+    
+        <form action="/clucks" method="POST">
+            <%- include("../partials/formInput.ejs") %>
+            <input type="submit" value="Cluck!" class="btn btn-outline-secondary float-right btn-lg">
+        </form>
+</div>
+<%- include("../partials/footer.ejs") %>
