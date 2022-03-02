@@ -1,5 +1,18 @@
+<div class='form-group'>
+    <label>Content</label>
+    <textarea
+    class='form-control' 
+    name='content' 
+    placeholder='Whatchoo cluckin\' \'bout?' 
+    cols='60'
+    rows='5'
+    >
+    <%- cluck ? cluck.content : '' %>
+    </textarea> 
+</div>
 
 <div class='form-group'>
+    <label>Image Url</label>
     <input 
     type="url" 
     class='form-control' 
@@ -9,13 +22,13 @@
     />
 </div>
 <div class='form-group'>
-    <textarea
+    <label>Hashtag</label>
+    <input 
+    type="text" 
     class='form-control' 
-    name='content' 
-    placeholder='What are your thoughts?' 
-    cols='60'
-    rows='5'
-    >
-    <%- cluck ? cluck.content : '' %>
-    </textarea> 
+    name='hashtag' 
+    placeholder='hashtag' 
+    value="<%= cluck ? cluck.hashtag : '' %>"
+    />
 </div>
+ 

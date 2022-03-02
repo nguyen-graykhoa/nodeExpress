@@ -26,16 +26,9 @@
                         <span>Just Now</span>
                        <%}%>
 
-                       
+ 
                     </a>
-                    <p >
-                        <% if (cluck.hashtag) { %>
-                            <span>#<%=cluck.hashtag ? cluck.hashtag : '' %></span>
-                        <% } %>
-                         
-                        <%- cluck.content %>
-                    </p>
-                     
+                    <p ><%- cluck.content %></p>
                      <img class="image-responsive cluck-img" src="<%- cluck.image_url %>" alt="cluck photo" > 
                      
                 </div>
@@ -43,4 +36,3 @@
         <% } %>
     </div>
 <%- include("../partials/footer.ejs") %>
-
