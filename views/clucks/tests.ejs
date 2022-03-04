@@ -1,0 +1,38 @@
+
+<%- include("../partials/header.ejs") %>
+     
+    <div>
+        <% for (let cluck of clucks) { %>
+            <div class="container-fluid" style="display: flex; margin: 8px; border: solid 1px grey; padding: 8px">
+                <div ><img src="/img/chicken.jpeg" alt="" style="width: 50px; height: 45px; border-radius: 2px;"></div>
+                <div style="margin-left: 5px;">
+                    <a href="/clucks/<%- cluck.id %>">                         
+                       <span><%- cluck.username %></span>
+                       <% today = new Date() %>
+                       <% created_at = new Date(cluck.created_at) %>
+                       <% const diffTime = Math.floor(Math.abs(today - created_at)); %>
+                        
+                       <% const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));  %>
+                       <% const diffHours = Math.ceil(diffTime / 36e5);  %>
+                       <% const diffMinutes = Math.ceil(diffTime / 60000); %>
+                        <span><%- diffDays %> days ago <%-diffHours%> hours ago <%- diffMinutes%> minutes ago </span>
+                       <% if ( parseInt(diffDays) > 1) { %>
+                        <span><%=diffDays%> days ago</span>
+                       <%} else if ( parseInt(diffDays) < 1 && parseInt(diffHours) > 1) { %>
+                        <span><%=diffHours%> hours ago</span>
+                       <%} else if ( parseInt(diffDays) < 1 && parseInt(diffHours) < 1) { %>
+                        <span><%=diffMinutes%> minutes ago</span>
+                       <%}  else if ( parseInt(diffDays) < 1 && parseInt(diffHours) < 1 && parseInt(diffMinutes) < 1) { %>
+                        <span>Just Now</span>
+                       <%}%>
+
+ 
+                    </a>
+                    <p ><%- cluck.content %></p>
+                     <img class="image-responsive cluck-img" src="<%- cluck.image_url %>" alt="cluck photo" > 
+                     
+                </div>
+            </div>
+        <% } %>
+    </div>
+<%- include("../partials/footer.ejs") %>

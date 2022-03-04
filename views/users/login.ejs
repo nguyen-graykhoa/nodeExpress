@@ -1,0 +1,12 @@
+<%- include("../partials/header.ejs") %> 
+<div class="container-fluid d-flex flex-column justify-content-center " style="border: 1px solid grey; margin: 5px; padding: 10px; min-height: 120px; "> 
+<form action="/sign_in" method="post">
+     <label for="username">User Name</label>
+    <div>        
+        <input class="form-control" type="text" name="username" id="">
+    </div>
+    <button class="float-right mt-3 btn btn-outline-dark btn-lg" type="submit">Sign In</button>
+</form>
+</div>
+
+<%- include("../partials/footer.ejs") %> 

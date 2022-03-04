@@ -1,0 +1,46 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border: solid 1px grey; margin-left:22px; margin-right:20px; margin-top:5px; width: 97.5%">
+    <a class="navbar-brand text-primary" href="/clucks/"><h1>🐓</h1></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 justify-content-end">
+        <!-- <li class="nav-item active">
+          <a class="nav-link text-primary" href="/">Home</a>
+        </li>   -->
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="/clucks/new">Cluck!</a>
+        </li>
+        
+         
+        <!-- <li class="nav-item">
+                    <a class="nav-link text-primary" href="/login">Login</a>
+                </li> -->
+        <% if(username) {%>
+        <li class="nav-item"><span><h3 class="mx-3"> <%= username %></h3></span></li>
+        <li class="nav-item">     
+         
+        <form action="/sign_out" method="post" class="mx-3">
+          <input type="submit" value="Sign Out" />
+        </form>
+        <%} else { %>
+        <a class="nav-link text-primary" href="/login" >Sign In</a>
+        <% } %>
+        </li>
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link text-primary" href="/tasks/new">New task</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+</header>

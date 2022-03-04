@@ -1,0 +1,22 @@
+
+   
+<%- include("../partials/header.ejs") %>
+    <div class="card mb-4">
+        <% if (cluck.image_url) { %>
+            <img class='card-img-top' src="<%- cluck.image_url %>" alt="cluck image" />
+        <% } %>
+        <div class="card-body">            
+            <p class="card-text">
+                <%- cluck.content %>
+                <% now =  %>
+                <em>Created At <%- cluck.created_at.toLocaleString() %> </em>
+                
+            </p>
+            <form action="/clucks/<%- cluck.id %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" class="btn btn-outline-danger" value="Delete">
+            </form>
+            <a class='btn btn-ouline-success' href='/clucks/<%- cluck.id %>/edit'>Edit</a>
+        </div>
+    </div>
+<%- include("../partials/footer.ejs") %>
